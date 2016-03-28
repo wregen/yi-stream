@@ -2,6 +2,10 @@
 
 YI stream is an attempt to make "YI Home camera" a standalone RTMP live streaming solution. Once YI is started, go to http://[YI IP] enter "Server URL" and "Stream Name" and camera will start publishing video and audio to RTMP server. It has been tested with YouTube and nginx-rtmp-module, but I believe it will work with other RTMP servers as well.
 
+## Screenshot
+
+[![YI stream](https://github.com/4clouds/yi-stream/master/screenshot.png)]
+
 ## Disclaimer
 
 **This solution is meant for educational purposes only. If you decide to flash your YI with this software, you are the only person responsible for any damages you make. Keep in mind that it is an early stage software and it may not work. You may brick your camera, and - for sure - you are breaking warranty agreement. Moreover, this firmware modification breaks all YI default functionality: YI mobile app will not work; no recording is possible.**
@@ -37,7 +41,7 @@ It uses ffmpeg for re-muxing and re-streaming av stream from RTSP on localhost t
 2. Lighttpd is 1.4.39;
 3. ffmpeg is N-78887-g21234c8
 
-# FAQ (initial)
+## FAQ (initial)
 
 ###### Is this software secure?
 
