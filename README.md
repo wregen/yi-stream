@@ -4,7 +4,7 @@ YI stream is an attempt to make "YI Home camera" a standalone RTMP live streamin
 
 ## Screenshot
 
-[![YI stream](https://github.com/4clouds/yi-stream/master/screenshot.png)]
+![YI stream](https://raw.githubusercontent.com/4clouds/yi-stream/master/screenshot.png)
 
 ## Disclaimer
 
