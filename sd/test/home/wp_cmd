@@ -1,0 +1,3 @@
+check_interval:[10]
+process:[rmm]
+cmd:[reboot]
