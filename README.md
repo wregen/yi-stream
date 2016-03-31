@@ -14,14 +14,6 @@ YI stream is an attempt to make "YI Home camera" a standalone RTMP live streamin
 
 YI I bought is Chinese version. The hw platform is 2. I did not tested this on any other YI versions.
 
-## How to flash it?
-
-Copy the content of ./sd to the root of your SD card and follow the instructions on http://xiaoyi.querex.be/.
-
-## How does it work?
-
-It uses ffmpeg for re-muxing and re-streaming av stream from RTSP on localhost to RTMP server. Additionaly a simple HTML UI has been made to start/stop streaming, checking an output logs and monitoring bandwidth.
-
 ## Licenses
 
 1. ./sd/home  - contains proprietary software which I think is a property of [Xiaomi Inc.](http://www.mi.com/en/),
@@ -43,6 +35,20 @@ It uses ffmpeg for re-muxing and re-streaming av stream from RTSP on localhost t
 
 ## FAQ (initial)
 
+###### How to flash it?
+
+Copy the content of ./sd to the root of your SD card and follow the instructions on http://xiaoyi.querex.be/.
+
+###### How to setup the camera?
+
+In order to setup wifi, you will still need Xiaomi app. As my camera is Chinese version I am using Chinese version of app from [here](https://www.dropbox.com/s/c6cazvn7imww2lc/yicamera_v2.10.0.6_20151105_release_umeng.apk?dl=0). Once camera says "Waiting to connect" you need to show it the QR code (from the app) with your wifi SSID and password. Camera will scan it and say "QR code scanned and successful", after few seconds it will say "Wifi is connected". Then (using your router DHCP listing) you find camera IP, go to http://[YI IP] and set up RTMP streaming.
+
+Very useful information on how to setup the camera can be found here: https://yicamera.wordpress.com/2015/12/01/why-cant-i-pair-my-yi-home-camera/.
+
+###### How does it work?
+
+It uses ffmpeg for re-muxing and re-streaming av stream from RTSP on localhost to RTMP server. Additionaly a simple HTML UI has been made to start/stop streaming, checking an output logs and monitoring bandwidth.
+
 ###### Is this software secure?
 
 Absolutely, not. HTTP of the camera is wide open. Please do not expose it to open Internet.
@@ -51,10 +57,6 @@ Absolutely, not. HTTP of the camera is wide open. Please do not expose it to ope
 
 I do not think so. I have removed: /home/cloud and /home/goolink.
 
-###### How did I build the software?
-
-First, I took Hi3518_SDK_V1.0.7.0.tgz, links can be found on http://nemon.org/ipcam-ipr1631x/. Then compiled lighttpd and ffmpeg with the arm-hisiv100-linux, wrote simple cgi and html/js gui.
-
 ###### What else has been removed?
 
 Check ./sd/test/equip_test.sh (at the end of the file) for all the files that I am removing from /home directory.
@@ -62,6 +64,10 @@ Check ./sd/test/equip_test.sh (at the end of the file) for all the files that I 
 ###### Do RTSP, Telnet and FTP work?
 
 Yes.
+
+###### How did I build the software?
+
+First, I took Hi3518_SDK_V1.0.7.0.tgz, links can be found on http://nemon.org/ipcam-ipr1631x/. Then compiled lighttpd and ffmpeg with the arm-hisiv100-linux, wrote simple cgi and html/js gui.
 
 ###### Why it cannot stream HD?
 
